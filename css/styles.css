@@ -1,0 +1,98 @@
+body{
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.dotsbox{
+    text-align: center;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    background-color: #2c3e50;
+    height: 40vh;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.myslider{
+    height: 100%;
+    width: 100%;
+    display: none;
+    overflow: hidden;
+}
+
+.myslider:first-of-type{
+    display: block;
+}
+
+.prev,
+.next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.75);
+    transition: 0.1s;
+    user-select: none;
+    border: 0;
+    background-color: transparent;
+}
+
+.prev:hover,
+.next:hover{
+    color: rgba(0, 0, 0, 1);
+}
+
+.next{
+    right: 0;
+}
+
+.dotsbox{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+}
+
+.dot{
+    width: 15px;
+    aspect-ratio: 1;
+    border: 0;
+    background-color:  rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active,
+.dot:hover{
+    background-color:  rgba(0, 0, 0, .9);
+
+}
+
+.fade{
+    -webkit-animation: fade 1.5s;
+    animation: fade 1.5s;
+}
+
+@-webkit-keyframes fade{
+    from {opacity: 0.8;}
+    to{opacity: 1;}
+}
+
+@keyframes fade{
+    from {opacity: 0.8;}
+    to{opacity: 1;}
+}
